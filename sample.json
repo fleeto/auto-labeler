@@ -1,0 +1,281 @@
+[
+  {
+    "binding": "kubernetes",
+    "object": {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "creationTimestamp": "2021-01-12T06:42:49Z",
+        "deletionGracePeriodSeconds": 30,
+        "deletionTimestamp": "2021-01-12T06:46:20Z",
+        "generateName": "sleep-696cc55d85-",
+        "labels": {
+          "app": "sleep",
+          "pod-template-hash": "696cc55d85"
+        },
+        "name": "sleep-696cc55d85-9ghwl",
+        "namespace": "example-monitor-pods",
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "ReplicaSet",
+            "name": "sleep-696cc55d85",
+            "uid": "026a3fbd-694c-41b7-976f-1e2201afaf30"
+          }
+        ],
+        "resourceVersion": "3773785",
+        "selfLink": "/api/v1/namespaces/example-monitor-pods/pods/sleep-696cc55d85-9ghwl",
+        "uid": "5424299c-10f5-4a5d-9e17-a42f7a07eb1e"
+      },
+      "spec": {
+        "containers": [
+          {
+            "image": "dustise/sleep:v0.9.6",
+            "imagePullPolicy": "IfNotPresent",
+            "name": "sleep",
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "name": "default-token-6wvzz",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "nodeName": "vm-14-252-centos",
+        "priority": 0,
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 30,
+        "tolerations": [
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          },
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          }
+        ],
+        "volumes": [
+          {
+            "name": "default-token-6wvzz",
+            "secret": {
+              "defaultMode": 420,
+              "secretName": "default-token-6wvzz"
+            }
+          }
+        ]
+      },
+      "status": {
+        "conditions": [
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2021-01-12T06:42:49Z",
+            "status": "True",
+            "type": "Initialized"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2021-01-12T06:42:52Z",
+            "status": "True",
+            "type": "Ready"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2021-01-12T06:42:52Z",
+            "status": "True",
+            "type": "ContainersReady"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2021-01-12T06:42:49Z",
+            "status": "True",
+            "type": "PodScheduled"
+          }
+        ],
+        "containerStatuses": [
+          {
+            "containerID": "docker://3703800d3e8c709d4a5e453678b0c5963f6ebe5d05cd71bf3968d628f31d2683",
+            "image": "dustise/sleep:v0.9.6",
+            "imageID": "docker-pullable://dustise/sleep@sha256:92dad62e00d08157a3921b7d7b568a247a8b24e8a067ad5dc20b210d7b1c2ad1",
+            "lastState": {},
+            "name": "sleep",
+            "ready": true,
+            "restartCount": 0,
+            "started": true,
+            "state": {
+              "running": {
+                "startedAt": "2021-01-12T06:42:51Z"
+              }
+            }
+          }
+        ],
+        "hostIP": "9.134.14.252",
+        "phase": "Running",
+        "podIP": "192.168.0.46",
+        "podIPs": [
+          {
+            "ip": "192.168.0.46"
+          }
+        ],
+        "qosClass": "BestEffort",
+        "startTime": "2021-01-12T06:42:49Z"
+      }
+    },
+    "type": "Event",
+    "watchEvent": "Modified"
+  },
+  {
+    "binding": "kubernetes",
+    "object": {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "creationTimestamp": "2021-01-12T06:42:49Z",
+        "deletionGracePeriodSeconds": 30,
+        "deletionTimestamp": "2021-01-12T06:46:20Z",
+        "generateName": "sleep-696cc55d85-",
+        "labels": {
+          "app": "sleep",
+          "pod-template-hash": "696cc55d85"
+        },
+        "name": "sleep-696cc55d85-9ghwl",
+        "namespace": "example-monitor-pods",
+        "ownerReferences": [
+          {
+            "apiVersion": "apps/v1",
+            "blockOwnerDeletion": true,
+            "controller": true,
+            "kind": "ReplicaSet",
+            "name": "sleep-696cc55d85",
+            "uid": "026a3fbd-694c-41b7-976f-1e2201afaf30"
+          }
+        ],
+        "resourceVersion": "3773789",
+        "selfLink": "/api/v1/namespaces/example-monitor-pods/pods/sleep-696cc55d85-9ghwl",
+        "uid": "5424299c-10f5-4a5d-9e17-a42f7a07eb1e"
+      },
+      "spec": {
+        "containers": [
+          {
+            "image": "dustise/sleep:v0.9.6",
+            "imagePullPolicy": "IfNotPresent",
+            "name": "sleep",
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+              {
+                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "name": "default-token-6wvzz",
+                "readOnly": true
+              }
+            ]
+          }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "nodeName": "vm-14-252-centos",
+        "priority": 0,
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 30,
+        "tolerations": [
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/not-ready",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          },
+          {
+            "effect": "NoExecute",
+            "key": "node.kubernetes.io/unreachable",
+            "operator": "Exists",
+            "tolerationSeconds": 300
+          }
+        ],
+        "volumes": [
+          {
+            "name": "default-token-6wvzz",
+            "secret": {
+              "defaultMode": 420,
+              "secretName": "default-token-6wvzz"
+            }
+          }
+        ]
+      },
+      "status": {
+        "conditions": [
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2021-01-12T06:42:49Z",
+            "status": "True",
+            "type": "Initialized"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2021-01-12T06:45:51Z",
+            "message": "containers with unready status: [sleep]",
+            "reason": "ContainersNotReady",
+            "status": "False",
+            "type": "Ready"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2021-01-12T06:45:51Z",
+            "message": "containers with unready status: [sleep]",
+            "reason": "ContainersNotReady",
+            "status": "False",
+            "type": "ContainersReady"
+          },
+          {
+            "lastProbeTime": null,
+            "lastTransitionTime": "2021-01-12T06:42:49Z",
+            "status": "True",
+            "type": "PodScheduled"
+          }
+        ],
+        "containerStatuses": [
+          {
+            "image": "dustise/sleep:v0.9.6",
+            "imageID": "",
+            "lastState": {},
+            "name": "sleep",
+            "ready": false,
+            "restartCount": 0,
+            "started": false,
+            "state": {
+              "waiting": {
+                "reason": "ContainerCreating"
+              }
+            }
+          }
+        ],
+        "hostIP": "9.134.14.252",
+        "phase": "Pending",
+        "qosClass": "BestEffort",
+        "startTime": "2021-01-12T06:42:49Z"
+      }
+    },
+    "type": "Event",
+    "watchEvent": "Modified"
+  }
+]

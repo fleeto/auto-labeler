@@ -1,0 +1,10 @@
+configVersion: v1
+kubernetes:
+- apiVersion: v1
+  kind: Pod
+  executeHookOnEvent: ["Modified"]
+  labelSelector:
+    matchExpressions:
+    - {key: node-dc, operator: DoesNotExist}
+    - {key: node-label, operator: Exists}
+  jqFilter: .spec.nodeName

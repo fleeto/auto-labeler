@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: auto-labeler
+  name: auto-labeler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auto-labeler
+  template:
+    metadata:
+      labels:
+        app: auto-labeler
+    spec:
+      serviceAccountName: monitor-pods-acc
+      containers:
+      - image: dustise/auto-labeler:v0.0.1
+        imagePullPolicy: IfNotPresent
+        name: auto-labeler
+        volumeMounts:
+        - mountPath: /etc/auto-labeler/
+          name: operator-config
+      volumes:
+      - configMap:
+          name: auto-labeler-config
+        name: operator-config
