@@ -3,14 +3,16 @@ kind: ClusterRole
 metadata:
   name: monitor-pods
 rules:
-- resources:
+- apiGroups: [""]
+  resources:
   - pods
   verbs:
   - get
   - watch
   - list
   - patch
-- resources:
+- apiGroups: [""]
+  resources:
   - nodes
   verbs:
   - get
@@ -28,10 +30,9 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: monitor-pods-acc
-  namespace: example-monitor-pods
+  namespace: kube-system
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: monitor-pods-acc
-  namespace: example-monitor-pods

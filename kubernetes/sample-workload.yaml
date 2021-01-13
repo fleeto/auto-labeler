@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sleep
+  name: sleep
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sleep
+  template:
+    metadata:
+      labels:
+        app: sleep
+        node-label: anything
+    spec:
+      containers:
+      - image: dustise/sleep:v0.9.6
+        imagePullPolicy: IfNotPresent
+        name: sleep
